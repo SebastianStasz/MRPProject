@@ -6,12 +6,14 @@
 import SwiftUI
 
 struct MainButtonStyle: ButtonStyle {
+
+    @Environment(\.isEnabled) private var isEnabled: Bool
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity)
             .frame(height: 50)
-            .background(Color.blue)
+            .background(isEnabled ? Color.blue : Color.gray)
             .cornerRadius(10)
             .padding(.top, .large)
             .padding(.horizontal, .medium)

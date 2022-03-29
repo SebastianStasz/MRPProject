@@ -36,7 +36,7 @@ struct ResultView: View {
                     .font(.title3)
                     .padding(.leading, .large)
                 
-                ResultTableView(items: table.items, type: table.type)
+                ResultTableView(items: table.items)
                     .embedInHorizontalScrollView()
             }
         }

@@ -3,19 +3,24 @@
 //  MRPProject
 //
 
+import Combine
 import SwiftUI
 
 struct DashboardView: View {
     @StateObject private var viewModel = DashboardVM()
+    @FocusState private var numOfWeeksFocus: Bool
     @State private var isComponentsViewPresented = false
     @State private var isSummaryViewPresented = false
     
     var body: some View {
         VStack(spacing: 0) {
             Group {
-                TextInput(title: "Ilość tygodni", value: $viewModel.bedData.numberOfWeeks)
-                    .keyboardType(.numberPad)
-                ForEach($viewModel.bedData.weeksData, content: WeekInput.init)
+                NumOfWeeksTextInput(viewModel: viewModel, isFocused: $numOfWeeksFocus)
+
+                ValidationMessage(.first_production_error_message)
+                    .displayIf(!viewModel.bedData.isValid)
+
+                WeekList(weeksData: $viewModel.bedData.weeksData)
             }
             .embedInForm()
         }
@@ -31,7 +36,7 @@ struct DashboardView: View {
         Group {
             Toolbar.leading(title: .reset_label, action: resetInputData)
             Toolbar.trailing(title: .components_label, action: presentComponentsView)
-            Toolbar.bottomBar { CalculateButton(isDisabled: viewModel.isLoading, action: calculateBedMRP) }
+            Toolbar.bottomBar { CalculateButton(isDisabled: viewModel.isLoading, action: calculateBedMRP).disabled(!viewModel.bedData.isValid) }
         }
     }
     
@@ -42,6 +47,7 @@ struct DashboardView: View {
     }
 
     private func resetInputData() {
+        numOfWeeksFocus = false
         viewModel.resetData()
     }
     

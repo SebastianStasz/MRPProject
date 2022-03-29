@@ -19,6 +19,7 @@ extension WeekData: Identifiable {
 
 extension WeekData {
     static func forNumberOfWeeks(_ count: Int) -> [WeekData] {
-        Range(1...count).map { WeekData(weekNumber: $0) }
+        let count = count > 0 ? count : 1
+        return Range(1...count).map { WeekData(weekNumber: $0) }
     }
 }

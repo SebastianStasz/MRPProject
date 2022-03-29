@@ -11,7 +11,7 @@ extension View {
     }
     
     func embedInHorizontalScrollView() -> some View {
-        ScrollView(.horizontal) { self }
+        ScrollView(.horizontal, showsIndicators: false) { self }
     }
     
     func navigation<Item, Destination: View>(item: Binding<Item?>, @ViewBuilder destination: (Item) -> Destination) -> some View {
@@ -27,7 +27,11 @@ extension View {
     func navigation<Destination: View>(isActive: Binding<Bool>, @ViewBuilder destination: () -> Destination) -> some View {
         overlay(NavigationLink(destination: destination(), isActive: isActive) {})
     }
-    
+
+    @ViewBuilder
+    func displayIf(_ condition: Bool) -> some View {
+        if condition { self }
+    }
     
     func activityIndicator(showIf isLoading: Bool) -> some View {
         self.disabled(isLoading)

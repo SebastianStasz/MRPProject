@@ -17,7 +17,7 @@ struct ComponentResult: Decodable, Equatable {
 
 extension ComponentResult {
     var table: Table {
-        Table(title: "MRP: \(type.title)", type: .mrp, items: tableItems)
+        Table(title: "MRP: \(type.title)", items: tableItems)
     }
     
     private var numOfWeeks: Int {

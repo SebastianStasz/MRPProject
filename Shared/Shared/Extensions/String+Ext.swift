@@ -20,4 +20,6 @@ extension String {
     static let calculate_label = "Oblicz"
     static let result_label = "Wynik"
     static let reset_label = "Reset"
+
+    static let first_production_error_message = "Pierwsza produkcja powinna wystąpić przynajmniej w tygodniu równym czasie produkcji łóżka."
 }

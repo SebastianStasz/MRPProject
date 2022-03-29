@@ -60,12 +60,13 @@ final class DashboardVM: ObservableObject {
         errorTracker
             .receive(on: DispatchQueue.main)
             .sink { [weak self] error in
+                print("Error: \(error)")
                 self?.isLoading = false
             }
             .store(in: &cancellables)
     }
 
     func resetData() {
-        bedData = .init()
+        bedData.reset()
     }
 }

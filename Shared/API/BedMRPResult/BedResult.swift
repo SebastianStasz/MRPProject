@@ -12,7 +12,7 @@ struct BedResult: Decodable, Equatable {
     let available: [Int]
 
     var table: Table {
-        Table(title: "GHP", type: .ghp, items: tableItems)
+        Table(title: "GHP", items: tableItems)
     }
 
     private var tableItems: [TableItem] {
