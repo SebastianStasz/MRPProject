@@ -13,6 +13,7 @@ final class DashboardVM: ObservableObject {
     @Published private(set) var isLoading = false
     @Published var bedMRPResult: BedMRPResult?
     @Published var bedData = BedViewData()
+    @Published var errorMessage: String?
     
     struct Input {
         let didTapCalculate = PassthroughSubject<BedViewData, Never>()
@@ -25,15 +26,6 @@ final class DashboardVM: ObservableObject {
     let input = Input()
     
     init() {
-        let errorTracker = SubjectDriver<Error>()
-
-//        $bedData
-//            .map { $0.numberOfWeeks }
-//            .sink { [weak self] numberOfWeeks in
-//                self?.bedData.weeksData = WeekData.forNumberOfWeeks(numberOfWeeks)
-//            }
-//            .store(in: &cancellables)
-        
         input.didTapCalculate
         //            .removeDuplicates()
             .handleEvents(receiveOutput: { [weak self] _ in
@@ -46,6 +38,7 @@ final class DashboardVM: ObservableObject {
                     .catch { error -> Empty in
                         print("Error: \(error)")
                         self?.isLoading = false
+                        self?.errorMessage = error.description
                         return Empty()
                     }
             }
@@ -54,14 +47,6 @@ final class DashboardVM: ObservableObject {
             .sink { [weak self] reposense in
                 self?.isLoading = false
                 self?.bedMRPResult = reposense
-            }
-            .store(in: &cancellables)
-        
-        errorTracker
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] error in
-                print("Error: \(error)")
-                self?.isLoading = false
             }
             .store(in: &cancellables)
     }

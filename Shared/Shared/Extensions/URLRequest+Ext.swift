@@ -6,9 +6,9 @@
 import Foundation
 
 extension URLRequest {
-    static func jsonRequest(for url: URL) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        return request
+    mutating func addHTTPHeaders(_ headers: [String: String]) {
+        for (key, value) in headers {
+            addValue(value, forHTTPHeaderField: key)
+        }
     }
 }

@@ -8,15 +8,10 @@ import Foundation
 
 final class BedMRPService {
 
-    private let baseURL = URL(string: "https://infinite-dusk-35346.herokuapp.com")!
-    private let apiService: APIServiceProtocol
+    private let apiService = APIService.shared
     
-    init(apiService: APIServiceProtocol = APIService.shared) {
-        self.apiService = apiService
-    }
-    
-    func calculateBedMRP(for model: BedMRPModel) -> AnyPublisher<BedMRPResult, Error> {
+    func calculateBedMRP(for model: BedMRPModel) -> AnyPublisher<BedMRPResult, APIError> {
         print("Send: \(model)")
-        return apiService.performRequest(to: baseURL, for: GetBedMRPRequest(body: model))
+        return apiService.performRequest(GetBedMRPRequest(body: model), type: .mrpCalculator)
     }
 }

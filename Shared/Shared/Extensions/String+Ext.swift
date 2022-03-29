@@ -21,5 +21,5 @@ extension String {
     static let result_label = "Wynik"
     static let reset_label = "Reset"
 
-    static let first_production_error_message = "Pierwsza produkcja powinna wystąpić przynajmniej w tygodniu równym czasie produkcji łóżka."
+    static let first_production_error_message = "Pierwsza produkcja powinna wystąpić przynajmniej tydzień później niż czas produkcji łóżka."
 }

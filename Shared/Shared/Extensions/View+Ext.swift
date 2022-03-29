@@ -27,11 +27,6 @@ extension View {
     func navigation<Destination: View>(isActive: Binding<Bool>, @ViewBuilder destination: () -> Destination) -> some View {
         overlay(NavigationLink(destination: destination(), isActive: isActive) {})
     }
-
-    @ViewBuilder
-    func displayIf(_ condition: Bool) -> some View {
-        if condition { self }
-    }
     
     func activityIndicator(showIf isLoading: Bool) -> some View {
         self.disabled(isLoading)
@@ -41,7 +36,12 @@ extension View {
     @ViewBuilder
     private func presentActivityIndicator(if isLoading: Bool) -> some View {
         if isLoading {
-            ProgressView().transition(.opacity)
+            Rectangle()
+                .fill(.gray).opacity(0.3)
+                .frame(width: 60, height: 60)
+                .cornerRadius(16)
+                .overlay(ProgressView())
+                .transition(.opacity)
         }
     }
 

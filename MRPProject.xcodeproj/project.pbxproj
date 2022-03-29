@@ -19,6 +19,10 @@
 		923A418D27E3482D006A52E4 /* BedViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A418B27E3482D006A52E4 /* BedViewData.swift */; };
 		923A419027E3496A006A52E4 /* ComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A418F27E3496A006A52E4 /* ComponentType.swift */; };
 		923A419127E3496A006A52E4 /* ComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A418F27E3496A006A52E4 /* ComponentType.swift */; };
+		923ABC3427F3869F000CD1AE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ABC3327F3869F000CD1AE /* RequestType.swift */; };
+		923ABC3527F3869F000CD1AE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ABC3327F3869F000CD1AE /* RequestType.swift */; };
+		923ABC3727F3882D000CD1AE /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ABC3627F3882D000CD1AE /* APIConfiguration.swift */; };
+		923ABC3827F3882D000CD1AE /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ABC3627F3882D000CD1AE /* APIConfiguration.swift */; };
 		925325DE27E48138005FD5EA /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925325DD27E48138005FD5EA /* CGFloat+Ext.swift */; };
 		925325E027E4849D005FD5EA /* ComponentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925325DF27E4849D005FD5EA /* ComponentSection.swift */; };
 		925325E227E484E8005FD5EA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925325E127E484E8005FD5EA /* String+Ext.swift */; };
@@ -35,11 +39,10 @@
 		92E46F4027E29FC800F362AE /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F3E27E29FC800F362AE /* Encodable+Ext.swift */; };
 		92E46F4227E29FE400F362AE /* URLRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4127E29FE400F362AE /* URLRequest+Ext.swift */; };
 		92E46F4327E29FE400F362AE /* URLRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4127E29FE400F362AE /* URLRequest+Ext.swift */; };
-		92E46F4527E2A01600F362AE /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4427E2A01600F362AE /* APIServiceProtocol.swift */; };
-		92E46F4627E2A01600F362AE /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4427E2A01600F362AE /* APIServiceProtocol.swift */; };
-		92E46F4927E2A06400F362AE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4827E2A06400F362AE /* HttpMethod.swift */; };
-		92E46F4A27E2A06400F362AE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4827E2A06400F362AE /* HttpMethod.swift */; };
+		92E46F4927E2A06400F362AE /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4827E2A06400F362AE /* RequestMethod.swift */; };
+		92E46F4A27E2A06400F362AE /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46F4827E2A06400F362AE /* RequestMethod.swift */; };
 		92E7CBCE27F3446100BDA271 /* NumOfWeeksTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7CBCD27F3446100BDA271 /* NumOfWeeksTextInput.swift */; };
+		92E7CBD027F3489D00BDA271 /* DisplayIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7CBCF27F3489D00BDA271 /* DisplayIf.swift */; };
 		92EF3A5927E23034003A3D0C /* BedMRPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF3A5827E23034003A3D0C /* BedMRPModel.swift */; };
 		92EF3A5A27E23034003A3D0C /* BedMRPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF3A5827E23034003A3D0C /* BedMRPModel.swift */; };
 		92EF3A5C27E2314F003A3D0C /* BedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF3A5B27E2314F003A3D0C /* BedModel.swift */; };
@@ -94,6 +97,8 @@
 		923A418827E34804006A52E4 /* ComponentsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsViewData.swift; sourceTree = "<group>"; };
 		923A418B27E3482D006A52E4 /* BedViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedViewData.swift; sourceTree = "<group>"; };
 		923A418F27E3496A006A52E4 /* ComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentType.swift; sourceTree = "<group>"; };
+		923ABC3327F3869F000CD1AE /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		923ABC3627F3882D000CD1AE /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		925325DD27E48138005FD5EA /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		925325DF27E4849D005FD5EA /* ComponentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentSection.swift; sourceTree = "<group>"; };
 		925325E127E484E8005FD5EA /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -106,9 +111,9 @@
 		92E46F3B27E2989400F362AE /* GetBedMRPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBedMRPRequest.swift; sourceTree = "<group>"; };
 		92E46F3E27E29FC800F362AE /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		92E46F4127E29FE400F362AE /* URLRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ext.swift"; sourceTree = "<group>"; };
-		92E46F4427E2A01600F362AE /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
-		92E46F4827E2A06400F362AE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		92E46F4827E2A06400F362AE /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		92E7CBCD27F3446100BDA271 /* NumOfWeeksTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumOfWeeksTextInput.swift; sourceTree = "<group>"; };
+		92E7CBCF27F3489D00BDA271 /* DisplayIf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIf.swift; sourceTree = "<group>"; };
 		92EF3A5827E23034003A3D0C /* BedMRPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedMRPModel.swift; sourceTree = "<group>"; };
 		92EF3A5B27E2314F003A3D0C /* BedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedModel.swift; sourceTree = "<group>"; };
 		92EF3A5E27E23168003A3D0C /* ComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentModel.swift; sourceTree = "<group>"; };
@@ -214,20 +219,14 @@
 			path = ResultView;
 			sourceTree = "<group>";
 		};
-		92E46F4727E2A05500F362AE /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9254374927E2858E001D39F0 /* APIRequest.swift */,
-				92E46F4827E2A06400F362AE /* HttpMethod.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		92E46F4B27E2A08600F362AE /* APIService */ = {
 			isa = PBXGroup;
 			children = (
 				92EF3A6327E23252003A3D0C /* APIService.swift */,
-				92E46F4427E2A01600F362AE /* APIServiceProtocol.swift */,
+				9254374927E2858E001D39F0 /* APIRequest.swift */,
+				923ABC3627F3882D000CD1AE /* APIConfiguration.swift */,
+				923ABC3327F3869F000CD1AE /* RequestType.swift */,
+				92E46F4827E2A06400F362AE /* RequestMethod.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -255,7 +254,6 @@
 				922646C427E35B9200941721 /* BedMRPResult */,
 				92E46F4D27E2A1D900F362AE /* BedMRPRequest */,
 				92E46F4B27E2A08600F362AE /* APIService */,
-				92E46F4727E2A05500F362AE /* Helpers */,
 				92E46F4C27E2A09C00F362AE /* Services */,
 			);
 			path = API;
@@ -326,6 +324,7 @@
 				925325E327E4867F005FD5EA /* EmbedInNavigationView.swift */,
 				925325E527E486E3005FD5EA /* Toolbar.swift */,
 				92FE636C27DFC07500C8DC50 /* MainButtonStyle.swift */,
+				92E7CBCF27F3489D00BDA271 /* DisplayIf.swift */,
 				92FE636927DFBB5000C8DC50 /* TextInput.swift */,
 				92A4A7B327F341BE00D31572 /* ValidationMessage.swift */,
 				923A418627E3387E006A52E4 /* WeekInput.swift */,
@@ -476,12 +475,14 @@
 				925325E927E488F5005FD5EA /* CalculateButton.swift in Sources */,
 				92A4A7B227F3410900D31572 /* WeekList.swift in Sources */,
 				925325DE27E48138005FD5EA /* CGFloat+Ext.swift in Sources */,
+				923ABC3727F3882D000CD1AE /* APIConfiguration.swift in Sources */,
 				923A416E27E320A8006A52E4 /* Publisher+Ext.swift in Sources */,
 				92E46F3C27E2989400F362AE /* GetBedMRPRequest.swift in Sources */,
 				92FF169D27E124C900CFDD05 /* TableItem.swift in Sources */,
 				92A4A7B427F341BE00D31572 /* ValidationMessage.swift in Sources */,
 				92EF3A6427E23252003A3D0C /* APIService.swift in Sources */,
 				92E46F4227E29FE400F362AE /* URLRequest+Ext.swift in Sources */,
+				923ABC3427F3869F000CD1AE /* RequestType.swift in Sources */,
 				92FE635A27DFB4EF00C8DC50 /* ComponentsView.swift in Sources */,
 				922646C627E35BA700941721 /* BedMRPResult.swift in Sources */,
 				92EF3A6727E2328F003A3D0C /* BedMRPService.swift in Sources */,
@@ -493,17 +494,17 @@
 				92FF169727E123EF00CFDD05 /* CellView.swift in Sources */,
 				923A418727E3387E006A52E4 /* WeekInput.swift in Sources */,
 				923A416C27E3207C006A52E4 /* Typealiases.swift in Sources */,
-				92E46F4527E2A01600F362AE /* APIServiceProtocol.swift in Sources */,
 				92E7CBCE27F3446100BDA271 /* NumOfWeeksTextInput.swift in Sources */,
 				92E46F3F27E29FC800F362AE /* Encodable+Ext.swift in Sources */,
 				923A418927E34804006A52E4 /* ComponentsViewData.swift in Sources */,
 				925325E027E4849D005FD5EA /* ComponentSection.swift in Sources */,
 				922646CA27E35C7E00941721 /* ComponentResult.swift in Sources */,
 				92FF169A27E1249B00CFDD05 /* Table.swift in Sources */,
+				92E7CBD027F3489D00BDA271 /* DisplayIf.swift in Sources */,
 				92EF3A5927E23034003A3D0C /* BedMRPModel.swift in Sources */,
 				92FE637027DFC1E800C8DC50 /* ResultView.swift in Sources */,
 				92EF3A5C27E2314F003A3D0C /* BedModel.swift in Sources */,
-				92E46F4927E2A06400F362AE /* HttpMethod.swift in Sources */,
+				92E46F4927E2A06400F362AE /* RequestMethod.swift in Sources */,
 				9254374A27E2858E001D39F0 /* APIRequest.swift in Sources */,
 				925325E427E48680005FD5EA /* EmbedInNavigationView.swift in Sources */,
 				925325E627E486E3005FD5EA /* Toolbar.swift in Sources */,
@@ -524,6 +525,7 @@
 				92FE637D27DFC76D00C8DC50 /* ComponentViewData.swift in Sources */,
 				92E46F3D27E2989400F362AE /* GetBedMRPRequest.swift in Sources */,
 				92FF169E27E124C900CFDD05 /* TableItem.swift in Sources */,
+				923ABC3827F3882D000CD1AE /* APIConfiguration.swift in Sources */,
 				92EF3A6527E23252003A3D0C /* APIService.swift in Sources */,
 				92E46F4327E29FE400F362AE /* URLRequest+Ext.swift in Sources */,
 				92FE635B27DFB4EF00C8DC50 /* ComponentsView.swift in Sources */,
@@ -533,18 +535,18 @@
 				92FE636B27DFBB5000C8DC50 /* TextInput.swift in Sources */,
 				92FE638427DFCE1D00C8DC50 /* View+Ext.swift in Sources */,
 				92FF169827E123EF00CFDD05 /* CellView.swift in Sources */,
-				92E46F4627E2A01600F362AE /* APIServiceProtocol.swift in Sources */,
 				92E46F4027E29FC800F362AE /* Encodable+Ext.swift in Sources */,
 				92FF169B27E1249B00CFDD05 /* Table.swift in Sources */,
 				92EF3A5A27E23034003A3D0C /* BedMRPModel.swift in Sources */,
 				92FE637127DFC1E800C8DC50 /* ResultView.swift in Sources */,
 				92EF3A5D27E2314F003A3D0C /* BedModel.swift in Sources */,
-				92E46F4A27E2A06400F362AE /* HttpMethod.swift in Sources */,
+				92E46F4A27E2A06400F362AE /* RequestMethod.swift in Sources */,
 				9254374B27E2858E001D39F0 /* APIRequest.swift in Sources */,
 				92EF3A6027E23168003A3D0C /* ComponentModel.swift in Sources */,
 				923A419127E3496A006A52E4 /* ComponentType.swift in Sources */,
 				923A418A27E34804006A52E4 /* ComponentsViewData.swift in Sources */,
 				92FE637527DFC5FC00C8DC50 /* DashboardVM.swift in Sources */,
+				923ABC3527F3869F000CD1AE /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

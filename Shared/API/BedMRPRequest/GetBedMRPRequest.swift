@@ -6,7 +6,7 @@
 import Foundation
 
 struct GetBedMRPRequest: APIRequest {
-    let httpMethod: HttpMethod = .POST
+    let method: RequestMethod = .POST
     let path: String = "/api/tables"
     let body: Encodable?
     

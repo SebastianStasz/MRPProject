@@ -11,6 +11,7 @@ struct DashboardView: View {
     @FocusState private var numOfWeeksFocus: Bool
     @State private var isComponentsViewPresented = false
     @State private var isSummaryViewPresented = false
+    @State private var isErrorPresented = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -30,6 +31,8 @@ struct DashboardView: View {
         .sheet(isPresented: $isComponentsViewPresented) { ComponentsView(viewModel: viewModel) }
         .embedInNavigationView(title: .demand_label)
         .activityIndicator(showIf: viewModel.isLoading)
+        .onChange(of: viewModel.errorMessage) { if $0 != nil { isErrorPresented = true } }
+        .alert("Błąd", isPresented: $isErrorPresented, actions: { Button("OK") { viewModel.errorMessage = nil } }, message: { Text(viewModel.errorMessage ?? "") })
     }
 
     private var toolbarContent: some ToolbarContent {
