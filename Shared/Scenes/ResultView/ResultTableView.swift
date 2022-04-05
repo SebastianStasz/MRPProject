@@ -16,12 +16,16 @@ struct ResultTableView: View {
             ForEach(items) { item in
                 CellView(text: item.title, isBold: true, alignment: .leading)
                 ForEach(item.values) { value in
-                    CellView(text: value.value, isBold: item.title == "Tydzień", alignment: .center)
+                    CellView(text: valueForItem(item, value: value.value), isBold: item.title == "Tydzień", alignment: .center)
                 }
             }
         }
         .background(Color.gray)
         .padding(.large)
+    }
+
+    private func valueForItem(_ item: TableItem, value: String) -> String {
+        item.title == "Przewidywane na stanie" ? value : (value == "0" ? "" : value)
     }
     
     private var gridLayout: [GridItem] {
