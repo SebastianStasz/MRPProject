@@ -12,17 +12,13 @@ struct ResultView: View {
     
     var body: some View {
         ScrollView {
-//            if orientation == .portrait {
-//                tables.embedInHorizontalScrollView()
-//            } else {
-//                tables
-//            }
             VStack(spacing: .large) {
                 tables
             }
             .padding(.top, 32)
         }
         .navigationTitle(String.result_label)
+        .edgesIgnoringSafeArea(edges)
         .onReceive(NotificationCenter.Publisher(center: .default, name: UIDevice.orientationDidChangeNotification)) { _ in
             orientation = UIDevice.current.orientation
         }
@@ -39,6 +35,17 @@ struct ResultView: View {
                 ResultTableView(items: table.items)
                     .embedInHorizontalScrollView()
             }
+        }
+    }
+
+    var edges: Edge.Set {
+        switch orientation {
+        case .landscapeLeft:
+            return [.trailing]
+        case .landscapeRight:
+            return [.leading]
+        default:
+            return []
         }
     }
 }
